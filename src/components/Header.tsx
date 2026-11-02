@@ -2,7 +2,7 @@ import './Header.css'
 
 const navItems = [
   { label: 'About me', href: '#about' },
-  { label: 'Experience', href: '#experience' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ]
