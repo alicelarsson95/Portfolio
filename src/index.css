@@ -78,3 +78,31 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---------- Shared section heading (title + handwritten subtitle) ---------- */
+
+.section-heading {
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.section-heading__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.75rem, 6vw + 0.5rem, 4.5rem);
+  line-height: 1;
+  color: var(--purple);
+  text-shadow: 0.05em 0.05em 0 var(--pink);
+}
+
+.section-heading__subtitle {
+  display: inline-block;
+  margin: 0.25rem 0 0;
+  font-family: var(--font-hand);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  line-height: 1;
+  color: var(--pink);
+  transform: rotate(-3deg);
+}

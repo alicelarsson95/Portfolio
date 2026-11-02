@@ -6,11 +6,11 @@ function Skills() {
   return (
     <section className="skills" id="skills" aria-labelledby="skills-title">
       <div className="skills__inner">
-        <header className="skills__heading">
-          <h2 className="skills__title" id="skills-title">
+        <header className="section-heading">
+          <h2 className="section-heading__title" id="skills-title">
             Skills
           </h2>
-          <p className="skills__subtitle">my toolbox</p>
+          <p className="section-heading__subtitle">my toolbox</p>
         </header>
 
         <div className="skills__grid">
