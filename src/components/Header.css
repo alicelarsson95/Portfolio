@@ -1,0 +1,111 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: var(--border);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0.9rem var(--gutter);
+}
+
+.header__logo {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--purple);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.header__logo span {
+  color: var(--pink);
+}
+
+.header__logo:hover {
+  transform: rotate(-4deg) scale(1.05);
+}
+
+.header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__link {
+  display: inline-block;
+  padding: 0.45rem 1.05rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--white);
+  border: var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.header__link:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow);
+}
+
+.header__link:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+/* Each button gets its own candy color on hover */
+.header__nav li:nth-child(1) .header__link:hover {
+  background: var(--pink);
+}
+
+.header__nav li:nth-child(2) .header__link:hover {
+  background: var(--lime);
+}
+
+.header__nav li:nth-child(3) .header__link:hover {
+  background: var(--pink-light);
+}
+
+.header__nav li:nth-child(4) .header__link:hover {
+  background: var(--purple);
+  color: var(--white);
+}
+
+@media (max-width: 720px) {
+  .header {
+    position: static;
+  }
+
+  .header__inner {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .header__nav {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .header__link {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.875rem;
+  }
+}
