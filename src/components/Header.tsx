@@ -11,8 +11,8 @@ function Header() {
   return (
     <header className="header">
       <div className="header__inner">
-        <a className="header__logo" href="#top" aria-label="alice.dev – back to top">
-          alice<span>.dev</span>
+        <a className="header__logo" href="#top" aria-label="Alice Larsson, till startsidan">
+          &lt;AL/&gt;
         </a>
 
         <nav aria-label="Main">

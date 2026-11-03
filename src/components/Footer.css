@@ -1,0 +1,14 @@
+.footer {
+  padding: 1.5rem var(--gutter);
+  background: var(--ink);
+  border-top: var(--border);
+}
+
+.footer__text {
+  margin: 0;
+  font-family: var(--font-pixel);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--pink-light);
+}
