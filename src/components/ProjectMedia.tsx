@@ -21,10 +21,12 @@ type ProjectMediaProps = {
   name: string
   image?: string
   imageAlt?: string
+  imagePosition?: string
   video?: string
 }
 
-function ProjectMedia({ name, image, imageAlt, video }: ProjectMediaProps) {
+function ProjectMedia({ name, image, imageAlt, imagePosition, video }: ProjectMediaProps) {
+  const positionStyle = imagePosition ? { objectPosition: imagePosition } : undefined
   const canHover = useCanHover()
   const videoRef = useRef<HTMLVideoElement>(null)
   const [playing, setPlaying] = useState(false)
@@ -58,12 +60,13 @@ function ProjectMedia({ name, image, imageAlt, video }: ProjectMediaProps) {
       onMouseEnter={showVideo ? start : undefined}
       onMouseLeave={showVideo ? stop : undefined}
     >
-      <img src={image} alt={imageAlt ?? `Screenshot of ${name}`} />
+      <img src={image} alt={imageAlt ?? `Screenshot of ${name}`} style={positionStyle} />
       {showVideo && (
         <video
           ref={videoRef}
           className={playing ? 'is-playing' : undefined}
           src={video}
+          style={positionStyle}
           muted
           loop
           playsInline

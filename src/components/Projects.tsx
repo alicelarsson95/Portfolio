@@ -19,10 +19,13 @@ function Projects() {
               className={`project-card ${index % 2 === 0 ? 'project-card--pin' : 'project-card--tape'}`}
               key={project.name}
             >
+              {project.badge && <p className="project-card__stamp">{project.badge}</p>}
+
               <ProjectMedia
                 name={project.name}
                 image={project.image}
                 imageAlt={project.imageAlt}
+                imagePosition={project.imagePosition}
                 video={project.video}
               />
 
@@ -38,6 +41,7 @@ function Projects() {
               </ul>
 
               <div className="project-card__links">
+                {project.note && <p className="project-card__note">{project.note}</p>}
                 {project.links.map((link) => (
                   <a
                     className="project-link"
