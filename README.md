@@ -2,7 +2,7 @@
 
 My personal portfolio, designed in Figma and built with React and TypeScript.
 
-🔗 **Live site:** [LÄNK KOMMER]
+🔗 **Live site:** [](https://alicel-portfolio.netlify.app/)
 
 ![Screenshot of the portfolio](public/projects/portfolio.webp)
 
